@@ -23,5 +23,13 @@ fn main() {
         .read_line(&mut number_guessed)
         .expect("Failed to read line");
 
+    // q: what is "shadowing" in rust?
+    // a: shadowing is a feature in rust that allows you to
+    // reuse the same variable name for different types
+    let number_guessed: u32 = number_guessed
+        .trim() // trim the "\n" from the input: when you hit enter
+        .parse() // parse the input to a number
+        .expect("Please type a number!");
+
     println!("You guessed: {}", number_guessed);
 }
