@@ -40,6 +40,8 @@ fn main() {
             // parse the input to a number
             .parse()
         {
+            // Switching from an expect call to a match expression is how you
+            // generally move from crashing on an error to handling the error.
             Ok(num) => num,
             Err(_) => continue,
         };
