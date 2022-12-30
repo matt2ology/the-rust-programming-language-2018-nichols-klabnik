@@ -47,7 +47,10 @@ fn main() {
             // a: => is a match operator, so it is used to match the value with the pattern
             Ordering::Less => println!("Too small!"),
             Ordering::Greater => println!("Too big!"),
-            Ordering::Equal => println!("You win!"),
+            Ordering::Equal => {
+                println!("You win!");
+                break;
+            }
         }
     }
 
