@@ -1,4 +1,6 @@
-use std::io; // this is a module in rust std library for input/output operations
+use rand::Rng;
+use std::cmp::Ordering; // this is a module in rust std library for comparing values
+use std::io; // this is a module in rust std library for input/output operations // this is a module in rand crate for random number generation
 
 fn main() {
     println!("Guess my number!");
